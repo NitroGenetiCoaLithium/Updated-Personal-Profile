@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
-    <title>Nataniel Agbanglo | Personal Profile with Music Player</title>
+    <title>Nataniel Agbanglo | Personal Profile</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -126,7 +126,6 @@
             margin-top: 70px;
             padding: 1rem 1.5rem 1.5rem;
             text-align: center;
-            border-bottom: 1px solid #3e4042;
         }
 
         /* ========== TYPING EFFECT ON NAME (CYAN SHIMMER) ========== */
@@ -150,94 +149,7 @@
         .bio-text {
             font-size: 0.95rem;
             color: #b0b3b8;
-            margin: 0.5rem 0;
-        }
-
-        /* Spotify-style inline player */
-        .inline-music-player {
-            margin-top: 1rem;
-            background: #2c2d2e;
-            border-radius: 0.75rem;
-            padding: 0.6rem 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid #3e4042;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* ========== MUSIC WAVES ANIMATION ON HOVER (CYAN) ========== */
-        .inline-music-player::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #00ffff, #0088ff, #00ffff);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: left;
-        }
-
-        .inline-music-player:hover::before {
-            transform: scaleX(1);
-        }
-
-        .inline-music-player:hover {
-            background: #3a3b3c;
-            transform: scale(1.01);
-        }
-
-        .album-art-small {
-            width: 48px;
-            height: 48px;
-            border-radius: 0.4rem;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .inline-music-player:hover .album-art-small {
-            transform: rotate(3deg) scale(1.05);
-        }
-
-        .track-info-compact {
-            flex: 1;
-            text-align: left;
-        }
-        .track-name-compact {
-            font-weight: 700;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            flex-wrap: wrap;
-        }
-        .track-name-compact i {
-            color: #00ffff;
-            transition: transform 0.2s ease;
-        }
-
-        .inline-music-player:hover .track-name-compact i {
-            transform: scale(1.1);
-        }
-
-        .artist-name-compact {
-            font-size: 0.7rem;
-            color: #b0b3b8;
-            margin-top: 0.15rem;
-        }
-        .volume-icon {
-            color: #00ffff;
-            font-size: 1.1rem;
-            transition: transform 0.2s ease;
-        }
-
-        .inline-music-player:hover .volume-icon {
-            transform: scale(1.1);
+            margin: 0.5rem 0 0;
         }
 
         /* other sections */
@@ -581,7 +493,6 @@
             .profile-pic-wrapper { bottom: -35px; }
             .profile-info { margin-top: 55px; }
             .display-name { font-size: 1.5rem; }
-            .album-art-small { width: 40px; height: 40px; }
         }
     </style>
 </head>
@@ -590,32 +501,19 @@
     <div class="profile-card">
         <div class="cover-area" id="coverImage" style="background-image: url(gg.png); background-size: cover; background-position: center;">
             <div class="profile-pic-wrapper">
-                <img id="profileImg" class="profile-pic" src="profile.jpg" alt="profile" onerror="this.style.display='none'; document.getElementById('fallbackIcon').style.display='flex';">
+                <img id="profileImg" class="profile-pic" src="pangprof.jpg" alt="profile" onerror="this.style.display='none'; document.getElementById('fallbackIcon').style.display='flex';">
                 <div id="fallbackIcon" class="profile-pic-fallback" style="display: none;"><i class="fas fa-user-circle"></i></div>
             </div>
         </div>
         <div class="profile-info">
             <div class="display-name">Nataniel Agbanglo</div>
-            <div class="bio-text">Stoichiometry</div>
-            
-            <!-- WORKING MUSIC PLAYER (tap to play) -->
-            <div class="inline-music-player" id="musicPlayerInline">
-                <img class="album-art-small" id="albumArtInline" src="the week.jpg" alt="Privilege cover">
-                <div class="track-info-compact">
-                    <div class="track-name-compact">
-                        <i class="fas fa-play-circle" id="playPauseIcon"></i> Privilege
-                    </div>
-                    <div class="artist-name-compact">The Weeknd · My Dear Melancholy</div>
-                </div>
-                <i class="fas fa-volume-up volume-icon"></i>
-            </div>
         </div>
     </div>
 
-    <!-- ========== ABOUT ME (FIXED GRAMMAR & PUNCTUATION) ========== -->
+    <!-- ========== ABOUT  ========== -->
     <div class="info-section">
         <div class="section-title"><i class="fas fa-info-circle"></i> About Me</div>
-        <div class="intro-text">Information Technology Student, loves the idea of Minimalism, Simplicity and Authenticity.</div>
+        <div class="intro-text"> Just someone who enjoys exploring technology, configuring how things work, and learning along the way.</div>
     </div>
 
     <!-- ========== PERSONALITY ========== -->
@@ -624,16 +522,14 @@
             <i class="fas fa-smile"></i> Personality
         </div>
         <div class="personality-grid">
-            <div class="personality-item"><i class="fas fa-moon"></i> Nocturnal</div>
-            <div class="personality-item"><i class="fas fa-rocket"></i> Fast Learner</div>
-            <div class="personality-item"><i class="fas fa-mountain"></i> Empathetic</div>
-            <div class="personality-item"><i class="fas fa-peace"></i> Unbothered</div>
-            <div class="personality-item"><i class="fas fa-umbrella"></i> Independent</div>
-            <div class="personality-item"><i class="fas fa-circle"></i> Minimalist</div>
-            <div class="personality-item"><i class="fas fa-sun"></i> Optimistic</div>
+            <div class="personality-item"> Simplicity</div>
+            <div class="personality-item"> Adaptive </div>
+            <div class="personality-item"> Unbothered</div>
+            <div class="personality-item"> Resilient </div>
+            <div class="personality-item"> Optimistic</div>
         </div>
         <div class="personality-quote">
-            <i class="fas fa-quote-left"></i> Your maximum is someone's minimum.  <i class="fas fa-quote-right"></i>
+            <i class="fas fa-quote-left"></i> No excuses, no overcompromising, just walk the talk. <i class="fas fa-quote-right"></i>
         </div>
     </div>
 
@@ -655,7 +551,7 @@
         <div class="detail-row"><i class="fas fa-graduation-cap"></i><span class="detail-text">Bachelor of Science in Information Technology</span></div>
         <div class="detail-row"><i class="fas fa-map-marker-alt"></i><span class="detail-text">Valenzuela City, Metro Manila, Philippines</span></div>
         <div class="detail-row"><i class="fas fa-code"></i><span class="detail-text">Java, HTML, CSS, C#</span></div>
-        <div class="detail-row"><i class="fas fa-brush"></i><span class="detail-text">Figma and Canva</span></div>
+        <div class="detail-row"><i class="fas fa-brush"></i><span class="detail-text">Figma, Canva and Cisco Packet Tracer</span></div>
         <div class="detail-row"><i class="fas fa-envelope"></i><span class="detail-text">natanielagbanglo@gmail.com</span></div>
     </div>
 
@@ -663,11 +559,10 @@
     <div class="hobby-section">
         <div class="hobby-title"><i class="fas fa-heart"></i> Hobbies & Interests</div>
         <div class="hobby-grid">
-            <div class="hobby-item"><i class="fas fa-chess"></i>Chess</div>
-            <div class="hobby-item"><i class="fas fa-headphones"></i>Music</div>
-            <div class="hobby-item"><i class="fas fa-book"></i>Equations</div>
-            <div class="hobby-item"><i class="fas fa-laptop"></i>Exploration</div>
-            <div class="hobby-item"><i class="fas fa-person-walking"></i>Walking</div>
+            <div class="hobby-item">Equations</div>
+            <div class="hobby-item">Exploration</div>
+            <div class="hobby-item"></i>Walking</div>
+            <div class="hobby-item"></i>Growtopia</div>
         </div>
     </div>
 
@@ -713,9 +608,6 @@
     <footer>© 2026 Nataniel Agbanglo. All Rights Reserved.</footer>
 </div>
 
-<!-- WORKING AUDIO - FIXED WITH NO ALERT -->
-<audio id="privilegeAudio" preload="auto" src="Video Project 1.mp3"></audio>
-
 <script>
     // Profile image fallback
     const profileImg = document.getElementById('profileImg');
@@ -728,61 +620,6 @@
         profileImg.style.display = 'none';
         fallbackIcon.style.display = 'flex';
     };
-
-    // MUSIC PLAYER - FIXED WITH NO ERROR ALERT
-    const audio = document.getElementById('privilegeAudio');
-    const playerCard = document.getElementById('musicPlayerInline');
-    const playPauseIcon = document.getElementById('playPauseIcon');
-    let isPlaying = false;
-
-    // Preload audio to make playback instant on first tap
-    audio.load();
-
-    function updateUI() {
-        if (isPlaying) {
-            playPauseIcon.className = 'fas fa-pause-circle';
-        } else {
-            playPauseIcon.className = 'fas fa-play-circle';
-        }
-    }
-
-    function togglePlay(e) {
-        e.stopPropagation();
-        
-        if (isPlaying) {
-            audio.pause();
-            isPlaying = false;
-            updateUI();
-        } else {
-            // Try to play - no alert on error, just silently retry
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    isPlaying = true;
-                    updateUI();
-                }).catch(() => {
-                    // Silent fail - browser requires user interaction
-                    // The tap itself is the interaction, so this shouldn't happen often
-                    console.log("Playback requires user interaction");
-                });
-            }
-        }
-    }
-
-    playerCard.addEventListener('click', togglePlay);
-
-    audio.addEventListener('ended', () => {
-        isPlaying = false;
-        updateUI();
-    });
-
-    // Set initial icon
-    updateUI();
-
-    const albumImg = document.getElementById('albumArtInline');
-    if (albumImg) {
-        albumImg.onerror = () => { albumImg.src = 'https://via.placeholder.com/48x48?text=The+Weeknd'; };
-    }
 </script>
 </body>
 </html>
